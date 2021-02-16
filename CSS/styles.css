@@ -73,3 +73,65 @@ header {
   font-weight: 300;
   border: none;
 }
+
+/* Middle section menu tabs*/
+.header__menu-tabs {
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  flex: none;
+}
+
+/* Each individual tab*/
+.header__menu-tab {
+  display: flex;
+  justify-content: center; /* centers it horizontally */
+  align-items: center; /* centers it vertically */
+  width: 600px; /* spreads the icons apart */
+  height: 62px;
+  border-bottom: 4px solid var(--fb-whitebg);
+  color: var(--light-color-text); /* changes color of icons */
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+/* Adds a blue border on the bottom when hovering over tabs. always applies to active tab */
+.header__menu-tab--active,
+.header__menu-tab:hover {
+  border-bottom: 4px solid var(--fb-blue);
+}
+
+/* Changes icon color to blue when you hover over it */
+.header__menu-tab:hover .fas,
+.header__menu-tab:hover .fab {
+  color: var(--fb-blue);
+}
+
+/* Changes the active tabs icon color to blue */
+.header__menu-tab--active .fas,
+.header__menu-tab--active .fab {
+  color: var(--fb-blue);
+}
+
+/* Make icons 'relative' to put notification bubble inside */
+.header__menu-tab .fas,
+.header__menu-tab .fab {
+  position: relative;
+}
+
+/* Position notification bubble on top right of icon */
+.header__notification-bubble {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fb-red);
+  color: white;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute; /* Position bubble inside icon */
+  top: -12px;
+  right: -10px;
+}
