@@ -27,6 +27,21 @@
   --shadow-color: rgba(0, 0, 0, 0.25);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fb-blue: #0a86f0;
+    --fb-black: #ffffff;
+    --fb-red: #ee2340;
+    --fb-yellow: #f6b024;
+    --fb-bgcolor: #212529;
+    --fb-white: #ffffff;
+    --fb-whitebg: #343a40;
+    --dark-color-text: #ffffff;
+    --light-color-text: #d4d4dc;
+    --button-link: #495057;
+  }
+}
+
 body {
   background: var(--fb-bgcolor);
   font-family: Helvetica, Arial, sans-serif;
@@ -173,7 +188,6 @@ header {
   display: flex;
   border-radius: 50%;
   color: var(--dark-color-text);
-  display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -286,7 +300,7 @@ header {
 /* Makes (fa-users) icon color white*/
 .sidenav__item-icon--circle-blue .fas,
 .sidenav__item-icon--circle-blue .fab {
-  color: var(--fb-whitebg);
+  color: var(--fb-white);
 }
 
 .sidenav__line {
@@ -306,7 +320,7 @@ header {
 
 .sidenav__item-icon--circle-dark-grey .fas,
 .sidenav__item-icon--circle-dark-grey .fab {
-  color: var(--fb-whitebg);
+  color: var(--fb-white);
 }
 
 .sidenav__heading-title {
@@ -338,7 +352,7 @@ header {
   border-radius: 5px;
   background: var(--stories-bg);
   position: relative;
-  box-shadow: 0px 2px 2px 0px var(--fb-black);
+  box-shadow: 0px 2px 2px 0px var(--shadow-color);
   margin-right: 10px;
   cursor: pointer;
 }
